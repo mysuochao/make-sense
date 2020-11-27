@@ -41,7 +41,7 @@ const ImportLabelPopup: React.FC<IProps> = (
     const [annotationsLoadedError, setAnnotationsLoadedError] = useState(null);
 
     const {getRootProps, getInputProps} = useDropzone({
-        accept: [AcceptedFileType.JSON, AcceptedFileType.TEXT],
+        accept: [AcceptedFileType.JSON, AcceptedFileType.TEXT, '.xml'],
         multiple: true,
         onDrop: (acceptedFiles) => {
             const importer = new (ImporterSpecData[formatType])([labelType])
